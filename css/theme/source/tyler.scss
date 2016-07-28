@@ -1,0 +1,57 @@
+/**
+ * A simple theme for reveal.js presentations, similar
+ * to the default theme. The accent color is darkblue.
+ *
+ * This theme is Copyright (C) 2012 Owen Versteeg, https://github.com/StereotypicalApps. It is MIT licensed.
+ * reveal.js is Copyright (C) 2011-2012 Hakim El Hattab, http://hakim.se
+ */
+
+
+// Default mixins and settings -----------------
+@import "../template/mixins";
+@import "../template/settings";
+// ---------------------------------------------
+
+
+
+
+// Override theme settings (see ../template/settings.scss)
+$mainFont: 'ratio', 'Helvetica', Arial, sans-serif;
+$mainColor: #D3FFF3;
+$mainFontSize: 40px;
+$headingFont: 'azo-sans-uber', Impact, sans-serif;
+$headingColor: #AFBBF2;
+$headingTextShadow: 5px 5px 10px black;
+$heading1TextShadow: 10px 10px 10px black;
+$headingTextTransform: none;
+$backgroundColor: #390345;
+$linkColor: #9649CB;
+$linkColorHover: lighten( $linkColor, 20% );
+$selectionBackgroundColor: rgba(0, 0, 0, 0.99);
+
+
+
+// Theme template ------------------------------
+@import "../template/theme";
+// ---------------------------------------------
+
+.reveal {
+	p {
+		font-weight: bold;
+	}
+
+	a:hover {
+		cursor: pointer;
+	}
+
+	blockquote { 
+		width: 100%; 
+		font-size: 80%;
+		text-align: left;
+		padding: 30px 30px 30px 40px;
+		border-left: 10px solid white;
+	}
+	q { quotes: "“" "”" "‘" "’"; }
+	q:before { content: open-quote }
+	q:after  { content: close-quote }
+}
